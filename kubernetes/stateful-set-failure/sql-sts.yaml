@@ -6,7 +6,7 @@ metadata:
     app: mysql
 spec:
   serviceName: "mysql-h"
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: mysql
@@ -17,13 +17,13 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: gokulmsfag/mysql
+          image: mysql:latest
           env:
             - name: MYSQL_ROOT_PASSWORD
               value: "test123"
           volumeMounts:
             - name: mysql-volume
-              mountPath: /var/lib/mysql
+              mountPath: /var/lib/
   volumeClaimTemplates:
     - metadata:
         name: mysql-volume

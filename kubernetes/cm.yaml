@@ -5,7 +5,7 @@ metadata:
 data:
   BACKEND_API: "backend-service.default:8080/api"
   PORT: "8080"
-  DB_HOST: "localhost"
+  DB_HOST: "mysql-h"
   DB_USERNAME: "root"
   DB_PASSWORD: "test123"
   MYSQL_ROOT_PASSWORD: "test123"
